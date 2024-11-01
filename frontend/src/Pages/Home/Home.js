@@ -56,10 +56,6 @@ const Home = () => {
       if (localStorage.getItem("user")) {
         const user = JSON.parse(localStorage.getItem("user"));
         console.log(user);
-
-        if (user.isAvatarImageSet === false || user.avatarImage === "") {
-          navigate("/setAvatar");
-        }
         setcUser(user);
         setRefresh(true);
       } else {
